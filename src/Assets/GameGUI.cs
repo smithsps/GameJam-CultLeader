@@ -13,6 +13,6 @@ public class GameGUI : MonoBehaviour {
 	// Update is called once per frame
 	void OnGUI () {
 		//BG
-		GUI.DrawTexture(new Rect(0,0,1600,900),BG);
+
 	}
 }
