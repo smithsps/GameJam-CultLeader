@@ -17,7 +17,7 @@ public class Transition : MonoBehaviour {
 		GUI.DrawTexture(new Rect(0,0,1600,900), BG);
 		GUI.TextArea(textRect, curText, mstyle);
 
-		GUI.Label(new Rect(400,600, 50, 50), "Click anywhere to continue.");
+		GUI.Label(new Rect(400,600, 50, 50), "Click anywhere to continue.", mstyle);
 
 		if(GUI.Button(new Rect(0,0,1600,900), "", mstyle)){
 			Application.LoadLevel("Game");
