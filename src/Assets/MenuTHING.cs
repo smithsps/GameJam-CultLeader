@@ -18,7 +18,14 @@ public class MenuTHING : MonoBehaviour {
 		GUI.DrawTexture(new Rect(0,0,1600,900), menuBG);
 		GUI.Label(titlePos, titleText ,titleStyle);
 
-		GUI.Button(PlayPos, Play, buttonStyle);
-		GUI.Button(ExitPos, Exit, buttonStyle);
+		if(GUI.Button(PlayPos, Play, buttonStyle)) {
+			Application.LoadLevel("Transition");
+		}
+		//So if not web player show close button.
+		if(!Application.isWebPlayer) {
+			if(GUI.Button(ExitPos, Exit, buttonStyle)) {
+				Application.Quit();
+			}
+		}
 	}
 }
